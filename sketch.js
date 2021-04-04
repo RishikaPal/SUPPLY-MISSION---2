@@ -18,14 +18,16 @@ function setup() {
     helecopterSprite=createSprite(width/2,200,10,10);
     helecopterSprit.addImage(helecopterIMG)
     helecopterSprite.scale=0.6
-    groundSprite=createSprite(width/2,height=35,width,10);
-    groundSprite.shapeColour=colour("pink")
+    height=35 
+    groundSprite=createSprite(width/2, height-35, width,10);
+     groundSprite.shapeColor=color(255);
+       groundSprite.shapeColour=colour("pink")
     engine=Engine.create();
     World=engine.world;
    packagebody=Bodies.circle(width/2,200,5,{restution:04,isStatic:true});
-   world.add(world,packagebody)
+   World.add(world, packageBody); 
   ground=Bodies.rectangle(width/2,650,width,10,{isStatic:true});
-   world.add(world,ground);
+  World.add(world, ground);
    Engine.run(engine);
    line1=createSprite(width/2,height=50,200,20);
    line1.shapeColour("red");
